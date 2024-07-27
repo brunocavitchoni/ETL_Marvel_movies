@@ -28,6 +28,8 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
 (movie_title, mcu_phase, release_date, tomato_meter, audience_score, movie_duration, production_budget, opening_weekend, domestic_box_office, worldwide_box_office);
 
+SELECT * FROM bronze_marvel_movies;
+
 -- Camada silver
 -- Criar tabela silver_marvel_movies 
 CREATE TABLE IF NOT EXISTS silver_marvel_movies (
@@ -60,14 +62,8 @@ FROM bronze_marvel_movies;
 
 SELECT * FROM silver_marvel_movies;
 
--- Criar tabela franchise_mapping
-CREATE TABLE IF NOT EXISTS franchise_mapping (
-    keyword VARCHAR(255),
-    franchise_name VARCHAR (255)
-);
-
--- Inserir dados na tabela franchise_mapping
-INSERT INTO franchise_mapping 
+-- Criar tabela silver_franchise_mapping
+CREATE TABLE silver_franchise_mapping 
 SELECT 
     movie_title,
     CASE
@@ -87,13 +83,11 @@ SELECT
         WHEN movie_title LIKE '%eternals%' THEN 'Eternals'
         ELSE 'Unknow'
     END AS 'franchise_name'
-FROM silver_marvel_movies;
-
-SELECT DISTINCT * FROM franchise_mapping
-
-GROUP BY keyword
-
+FROM silver_marvel_movies
+GROUP BY movie_title
 ORDER BY franchise_name;
+
+SELECT * from silver_franchise_mapping;
 
 -- Camada Gold
 -- Criar tabela gold_movie_summary
@@ -131,9 +125,9 @@ SELECT
     count(*) as total_movies,
     ROUND(AVG(m.tomato_meter),2) AS AVG_tomato_meter,
     ROUND(AVG(m.audience_score),2) AS AVG_audience_score
-FROM franchise_mapping AS f
+FROM silver_franchise_mapping AS f
 JOIN silver_marvel_movies AS m
-ON f.keyword = m.movie_title
+ON f.movie_title = m.movie_title
 GROUP BY franchise_name
 ORDER BY AVG_tomato_meter DESC, AVG_audience_score DESC;
 
@@ -155,9 +149,9 @@ SELECT
     ROUND(AVG(CAST(REPLACE(REPLACE(domestic_box_office, '"',''),',','') AS UNSIGNED)),2) AS AVG_domestic_box_office,
     ROUND(AVG(CAST(REPLACE(REPLACE(worldwide_box_office,'"',''),',','') AS UNSIGNED)),2) AS AVG_worldwide_box_office
 
-FROM franchise_mapping AS f
+FROM silver_franchise_mapping AS f
 JOIN silver_marvel_movies AS m
-ON f.keyword = m.movie_title
+ON f.movie_title = m.movie_title
 GROUP BY franchise_name
 ORDER BY total_profit DESC, AVG_profit DESC;
 
