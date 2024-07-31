@@ -68,26 +68,29 @@
 
 <h2>CRIAÇÃO DA TABELA gold_movies_summary</h2>
 
-![image](https://github.com/user-attachments/assets/a8207b14-7209-4616-96de-eba47dbaed02)
+![image](https://github.com/user-attachments/assets/34c468fe-b1ed-4bd9-82a7-f833da950f17)
 
 <p>Esta tabela tem por objetivo a visualização dos dados referentes as notas da crítica e da audiência para cada filme, ordenadas pela maior nota da crítica, em ordem decrescente</p>
 
 <h2>VISUALIZAÇÃO DOS DADOS DA TABELA gold_movies_summary</h2>
 
-![Uploading image.png…]()
-
+![image](https://github.com/user-attachments/assets/5bb91450-8a21-4a54-b59a-1c2f1082b75e)
 
 <h2>CRIAÇÃO DA TABELA gold_movies_financial_performance</h2>
 
-![image](https://github.com/user-attachments/assets/c54f0665-7853-4ceb-a87a-b74fe1c08aad)
+![image](https://github.com/user-attachments/assets/92c09560-7e44-445f-8103-20166749264c)
+
+<p>Esta tabela tem por objetivo a visualização dos dados referentes a arrecadação financeira para cada filme, ordenadas pelo lucro total, em ordem decrescente</p>
 
 <h2>VISUALIZAÇÃO DOS DADOS DA TABELA gold_movies_financial_performance</h2>
 
-![image](https://github.com/user-attachments/assets/7148c1dd-5f45-4803-b18e-ce2eb6b72e58)
+![image](https://github.com/user-attachments/assets/9ec947d4-c2b0-4777-a6cd-f1d594873221)
 
 <h2>CRIAÇÃO DA TABELA gold_franchises_summary</h2>
 
-![image](https://github.com/user-attachments/assets/29076d52-bdb8-4b27-9c4d-a882b45dd593)
+![image](https://github.com/user-attachments/assets/398b363e-cc1a-4899-b350-fdcf2006e71f)
+
+<p>Esta tabela tem por objetivo a visualização dos dados referentes as notas da crítica e da audiência para cada franquia, ordenadas pela maior nota da crítica, em ordem decrescente</p>
 
 <h2>VISUALIZAÇÃO DOS DADOS DA TABELA gold_franchises_summary</h2>
 
@@ -96,8 +99,11 @@
 
 <h2>CRIAÇÃO DA TABELA gold_franchises_financial_performance </h2>
   
-![image](https://github.com/user-attachments/assets/57074806-9bba-40e7-9254-4359b118d44b)
+![image](https://github.com/user-attachments/assets/ae767a10-3a18-49ab-b5ef-3c1437cd9eb3)
+
+<p>Esta tabela tem por objetivo a visualização dos dados referentes a arrecadação financeira para cada franquia, ordenadas pelo lucro total, em ordem decrescente</p>
 
 <h2>VISUALIZAÇÃO DOS DADOS DA TABELA gold_franchises_financial_performance</h2>
   
-![image](https://github.com/user-attachments/assets/412b50af-4061-4513-a86e-02f39bcc2be6)
+![image](https://github.com/user-attachments/assets/c71807f0-4805-4aee-a453-443a6978239f)
+
