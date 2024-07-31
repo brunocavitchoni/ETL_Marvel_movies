@@ -99,7 +99,9 @@ SELECT
     movie_title,
     tomato_meter,
     audience_score
-FROM silver_marvel_movies;
+FROM silver_marvel_movies
+GROUP BY movie_title
+ORDER BY tomato_meter DESC;
 
 SELECT * FROM gold_movies_summary;
 
@@ -109,12 +111,14 @@ SELECT
     release_date,
     mcu_phase,
     movie_title,
+    CAST(REPLACE(REPLACE(worldwide_box_office,'"',''),',','') AS UNSIGNED) - CAST(REPLACE(REPLACE(production_budget,'"',''),',','') AS UNSIGNED) AS total_profit,
     CAST(REPLACE(REPLACE(production_budget,'"',''),',','') AS UNSIGNED) AS production_budget,
     CAST(REPLACE(REPLACE(opening_weekend,'"',''),',','') AS UNSIGNED) AS opening_weekend,
     CAST(REPLACE(REPLACE(domestic_box_office, '"',''),',','') AS UNSIGNED) AS domestic_box_office,
-    CAST(REPLACE(REPLACE(worldwide_box_office,'"',''),',','') AS UNSIGNED) AS worldwide_box_office,
-    CAST(REPLACE(REPLACE(worldwide_box_office,'"',''),',','') AS UNSIGNED) - CAST(REPLACE(REPLACE(production_budget,'"',''),',','') AS UNSIGNED) AS total_profit
-FROM silver_marvel_movies;
+    CAST(REPLACE(REPLACE(worldwide_box_office,'"',''),',','') AS UNSIGNED) AS worldwide_box_office
+FROM silver_marvel_movies
+GROUP BY movie_title
+ORDER BY total_profit DESC;
 
 SELECT * FROM gold_movies_financial_performance;
 
