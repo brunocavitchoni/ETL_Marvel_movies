@@ -18,7 +18,18 @@
 
 ![image](https://github.com/user-attachments/assets/50ee5fb0-a2e1-4bf3-961a-f7aacc5c3b93)
 
-<h3>Utilizei apenas as 10 primeiras linhas, para facilitar a visualização dos dados neste arquivo.</h3>
+<h6>Utilizei apenas as 10 primeiras linhas, para facilitar a visualização dos dados neste arquivo.</h6>
+<h3>Conteúdo das colunas</h3>
+<p>movie_title: Nome do filme</p>
+<p>mcu_phase: Fase do filme dentro do MCU</p>
+<p>release_date: Data de lançamento</p>
+<p>tomato_meter: Nota dos críticos no Rotten Tomatoes</p>
+<p>audience_score: Nota do público geral</p>
+<p>movie_duration: Duração do filme em minutos</p>
+<p>production_budget: Gastos com a produção do filme em US$</p>
+<p>opening_weekend: Arrecadação da bilheteria no primeiro final de semana após a estreia</p>
+<p>domestic_box_office: Arrecadação da bilheteria nos Estados Unidos</p>
+<p>worldwide_box_office: Arrecadação da bilheteria em todo o mundo, incluindo Estados Unidos</p>
 
 -----------------------------------------------------------------
 
@@ -27,6 +38,14 @@
 <h2>Primeira transformação dos dados, modificando os tipo das colunas release_date, production_budget, opening_weekend, domestic_box_office e worldwide_box_office:</h2>
 
 ![image](https://github.com/user-attachments/assets/7fd2e40f-620e-4240-b13c-6ac59d478dd0)
+
+<h3>Modificações realizadas:</h3>
+
+<p>Modificação de release_date de varchar para DATE</p>
+<p>Modificação de production_budget de varchar para DECIMAL, com até 20 digitos, e com 2 digitos decimais</p>
+<p>Modificação de opening_weeked de varchar para DECIMAL, com até 20 digitos, e com 2 digitos decimais</p>
+<p>Modificação de domestic_box_office de varchar para DECIMAL, com até 20 digitos, e com 2 digitos decimais</p>
+<p>Modificação de worldwide_box_office de varchar para DECIMAL, com até 20 digitos, e com 2 digitos decimais</p>
 
 <h2>VISUALIZAÇÃO DE DADOS DA TABELA silver_marvel_movies:</h2>
 
@@ -40,6 +59,7 @@
 
 ![image](https://github.com/user-attachments/assets/4727e6ab-299d-4960-b2f5-dedfdee068b8)
 
+<p>O MCU pode ser dividido por franquias. O que eu fiz aqui foi adicionar cada filme a uma franquia em específico</p>
 -----------------------------------------------------------------
 
 <h1>CAMADA GOLD</h1>
@@ -48,11 +68,14 @@
 
 <h2>CRIAÇÃO DA TABELA gold_movies_summary</h2>
 
-![image](https://github.com/user-attachments/assets/d120e187-a19c-4b47-82a1-2d9c287c602d)
+![image](https://github.com/user-attachments/assets/a8207b14-7209-4616-96de-eba47dbaed02)
+
+<p>Esta tabela tem por objetivo a visualização dos dados referentes as notas da crítica e da audiência para cada filme, ordenadas pela maior nota da crítica, em ordem decrescente</p>
 
 <h2>VISUALIZAÇÃO DOS DADOS DA TABELA gold_movies_summary</h2>
 
-![image](https://github.com/user-attachments/assets/4076e54a-27bc-4172-a4d5-76ca4ef75030)
+![Uploading image.png…]()
+
 
 <h2>CRIAÇÃO DA TABELA gold_movies_financial_performance</h2>
 
