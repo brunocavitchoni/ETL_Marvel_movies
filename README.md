@@ -2,9 +2,12 @@
 
 <h2>Utilizei este tema para treinamento do processo de ingestão de dados de ponta a ponta, utilizando apenas SQL.</h2>
 
+![Diagrama sem nome drawio](https://github.com/user-attachments/assets/35b46806-be26-42ea-b556-b9f63587bcb4)
+
 <h3>Criação de ETL utilizando a Arquitetura Medallion:</h3>
 
 -----------------------------------------------------------------
+
 
 <h1>CAMADA BRONZE</h1>
 
